@@ -113,10 +113,8 @@ const excluir = (obj) => {
     }
 
 
-     fetch(`${API}patrimonio/delete`,{
-         method: 'delete',
-         headers: {'Content-type':'application/json, charset=UTF-8'},
-         body: JSON.stringify(pat)
+     fetch(`${API}patrimonio/${pat.id}/delete`,{
+         method: 'delete'
      })
      .then( r => r.json())
      .then(r => console.log(r))
